@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-url = "https://www.cricbuzz.com/cricket-stats/icc-rankings/men/teams"
+url = "https://www.cricbuzz.com/cricket-stats/icc-rankings/women/teams"
 
 try:
     response = requests.get(url)
@@ -42,4 +42,4 @@ for team,rank,pos in zip(name, r, p):
     position_lst.append(pos)
 
 df = pd.DataFrame({"Teams":team_lst, "Rating":ranking_lst, "Position":position_lst})
-df.to_csv("Teams_scores.csv",index = False)
+df.to_csv("Teams_ranking_women.csv",index = False)
