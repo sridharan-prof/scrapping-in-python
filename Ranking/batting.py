@@ -53,4 +53,4 @@ for number_tag, Name_tag, rank_tag in zip(number,Name,Ranking):
     rating_list.append(ranking_element)
     
 df = pd.DataFrame({"Position":num_list, "Player":player_list, "Rating":rating_list})
-df.to_csv("batting.csv",index = False)
+df.to_csv("batting_ranking.csv",index = False)

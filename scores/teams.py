@@ -42,4 +42,4 @@ for team,rank,pos in zip(name, r, p):
     position_lst.append(pos)
 
 df = pd.DataFrame({"Teams":team_lst, "Rating":ranking_lst, "Position":position_lst})
-print(df)
+df.to_csv("Teams_scores.csv",index = False)
